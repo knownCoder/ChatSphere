@@ -1,0 +1,398 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Inter, Arial, sans-serif;
+  background:#020617;
+  color:white;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:120px;
+  padding:40px;
+  background:
+    radial-gradient(circle at top left,#1e3a8a 0%,#020617 50%),
+    #020617;
+}
+
+.login-left{
+  max-width:500px;
+}
+
+.login-left h1{
+  font-size:72px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.login-left p{
+  color:#94a3b8;
+  font-size:20px;
+  margin-bottom:35px;
+}
+
+.feature{
+  font-size:18px;
+  margin-bottom:16px;
+  color:#e2e8f0;
+}
+
+.login-right{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.login-card{
+  width:420px;
+  background:rgba(15,23,42,0.95);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:40px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.45),
+    0 0 30px rgba(59,130,246,.15);
+}
+
+.login-card h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:30px;
+}
+
+.login-card input{
+  width:100%;
+  padding:16px;
+  border:none;
+  outline:none;
+  border-radius:14px;
+  background:#111827;
+  color:white;
+  margin-bottom:18px;
+  font-size:16px;
+}
+
+.login-card input::placeholder{
+  color:#64748b;
+}
+
+.login-card button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+  transition:.3s;
+}
+
+.login-card button:hover{
+  transform:translateY(-2px);
+}
+
+/* ================= CHAT LAYOUT ================= */
+
+.chat-layout{
+  display:flex;
+  height:100vh;
+  background:#020617;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+  width:260px;
+  background:#0f172a;
+  border-right:1px solid rgba(255,255,255,.06);
+  padding:30px 20px;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.menu-item{
+  padding:14px 18px;
+  border-radius:12px;
+  margin-bottom:10px;
+  cursor:pointer;
+  color:#cbd5e1;
+  transition:.3s;
+}
+
+.menu-item:hover{
+  background:#1e293b;
+}
+
+.menu-item.active{
+  background:#2563eb;
+  color:white;
+}
+
+/* ================= MAIN CHAT ================= */
+
+.main-chat{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.chat-header{
+  height:80px;
+  padding:0 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  background:#0f172a;
+}
+
+.chat-header h2{
+  font-size:22px;
+}
+
+/* ================= MESSAGES ================= */
+
+.messages{
+  flex:1;
+  overflow-y:auto;
+  padding:25px;
+}
+
+.message-bubble{
+  background:#1e293b;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:15px;
+  max-width:500px;
+}
+
+.message-user{
+  color:#60a5fa;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.message-time{
+  font-size:12px;
+  color:#94a3b8;
+  margin-top:8px;
+}
+
+.system-message{
+  text-align:center;
+  color:#fbbf24;
+  margin-bottom:15px;
+}
+
+/* ================= INPUT ================= */
+
+.input-area{
+  display:flex;
+  gap:12px;
+  padding:20px;
+  border-top:1px solid rgba(255,255,255,.06);
+  background:#0f172a;
+}
+
+.input-area input{
+  flex:1;
+  border:none;
+  outline:none;
+  border-radius:14px;
+  padding:15px;
+  background:#1e293b;
+  color:white;
+  font-size:15px;
+}
+
+.input-area button{
+  border:none;
+  border-radius:14px;
+  padding:15px 24px;
+  cursor:pointer;
+  color:white;
+  font-weight:600;
+  background:#2563eb;
+  transition:.3s;
+}
+
+.input-area button:hover{
+  transform:translateY(-2px);
+}
+
+/* ================= TYPING ================= */
+
+.typing-indicator{
+  color:#94a3b8;
+  padding:0 25px 12px;
+  font-style:italic;
+}
+
+/* ================= USERS PANEL ================= */
+
+.users-panel{
+  width:280px;
+  background:#0f172a;
+  border-left:1px solid rgba(255,255,255,.06);
+  padding:25px;
+}
+
+.users-panel h3{
+  margin-bottom:20px;
+}
+
+.user-card{
+  background:#1e293b;
+  padding:12px;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+/* ================= LEAVE BUTTON ================= */
+
+.leave-btn{
+  border:none;
+  background:#ef4444;
+  color:white;
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.leave-btn:hover{
+  background:#dc2626;
+}
+
+/* ================= THEME BUTTON ================= */
+
+.theme-btn{
+  width:100%;
+  margin-top:auto;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:30px;
+}
+
+.stat-card{
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  color:white;
+}
+
+.stat-card h3{
+  margin-bottom:15px;
+}
+
+.stat-card p{
+  font-size:40px;
+  font-weight:bold;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#334155;
+  border-radius:10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1100px){
+
+  .users-panel{
+    display:none;
+  }
+
+  .login-page{
+    flex-direction:column;
+    text-align:center;
+    gap:50px;
+  }
+
+  .login-left h1{
+    font-size:54px;
+  }
+}
+
+@media(max-width:768px){
+
+  .sidebar{
+    display:none;
+  }
+
+  .login-card{
+    width:100%;
+    max-width:400px;
+  }
+
+  .dashboard{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ================= THEME SYSTEM ================= */
+
+.chat-layout.dark {
+  background: #020617;
+  color: white;
+}
+
+.chat-layout.light {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.chat-layout.light .sidebar,
+.chat-layout.light .chat-header,
+.chat-layout.light .input-area,
+.chat-layout.light .users-panel {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.chat-layout.light .message-bubble {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.chat-layout.light .input-area input {
+  background: #f1f5f9;
+  color: #0f172a;
+}
